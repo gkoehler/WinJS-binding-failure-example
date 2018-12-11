@@ -9,4 +9,5 @@ Expected result: the timestamp always updates, no matter how much you scroll aro
 Actual result: at some point, the timestamp stops updating and won't register any more tile touches
 
 Platforms Affected: Windows 1803 and above, on HP tablet and Microsoft Surface Pro
+
 Platforms Not Affected: Windows 1703, on HP tablet and Microsoft Surface Pro
