@@ -21,6 +21,8 @@
                 );
 
                 this.categories = flatCategories.createGrouped(item => item.ParentCategoryName, item => item, (leftKey, rightKey) => leftKey.charCodeAt(0) - rightKey.charCodeAt(0));
+
+                this.message = "Tap a tile to see this message update.";
             },
             _setupUIHandlers: function () {
                 this.onItemInvoked = WinJS.UI.eventHandler(this._itemInvoked.bind(this));
