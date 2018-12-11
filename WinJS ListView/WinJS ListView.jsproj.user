@@ -5,4 +5,7 @@
     <MachineName>10.116.188.189</MachineName>
     <RequireAuthentication>false</RequireAuthentication>
   </PropertyGroup>
+  <PropertyGroup>
+    <ShowAllFiles>false</ShowAllFiles>
+  </PropertyGroup>
 </Project>

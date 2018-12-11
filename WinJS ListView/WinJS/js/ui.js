@@ -12,7 +12,7 @@
             // amd
             define(["./base"], factory);
         } else {
-            globalObject.msWriteProfilerMark && msWriteProfilerMark('WinJS.4.4 4.4.2.winjs.2017.3.14 ui.js,StartTM');
+            globalObject.msWriteProfilerMark && msWriteProfilerMark('WinJS.4.4 4.4.4.winjs.2017.7.24 ui.js,StartTM');
             if (typeof exports === 'object' && typeof exports.nodeName !== 'string') {
                 // CommonJS
                 factory(require("./base"));
@@ -20,7 +20,7 @@
                 // No module system
                 factory(globalObject.WinJS);
             }
-            globalObject.msWriteProfilerMark && msWriteProfilerMark('WinJS.4.4 4.4.2.winjs.2017.3.14 ui.js,StopTM');
+            globalObject.msWriteProfilerMark && msWriteProfilerMark('WinJS.4.4 4.4.4.winjs.2017.7.24 ui.js,StopTM');
         }
     }(function (WinJS) {
 
@@ -8570,8 +8570,11 @@ define('WinJS/Controls/ItemContainer/_ItemEventsHandler',[
 
                 resetPointerDownState: function ItemEventsHandler_resetPointerDownState() {
                     this._site.pressedElement = null;
-                    _ElementUtilities._removeEventListener(_Global, "pointerup", this._resetPointerDownStateBound);
-                    _ElementUtilities._removeEventListener(_Global, "pointercancel", this._resetPointerDownStateBound);
+                    
+                    if (this._resetPointerDownStateBound) {
+                        _ElementUtilities._removeEventListener(_Global, "pointerup", this._resetPointerDownStateBound);
+                        _ElementUtilities._removeEventListener(_Global, "pointercancel", this._resetPointerDownStateBound);
+                    }
 
                     this._resetPressedContainer();
 
