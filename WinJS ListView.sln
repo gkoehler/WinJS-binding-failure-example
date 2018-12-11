@@ -7,7 +7,7 @@ Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "WinJS ListView", "WinJS Lis
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{59B2B8FA-B4A6-4B7E-8F12-194BAC91B4D8}"
 	ProjectSection(SolutionItems) = preProject
-		Readme.txt = Readme.txt
+		Readme.md = Readme.md
 	EndProjectSection
 EndProject
 Global
